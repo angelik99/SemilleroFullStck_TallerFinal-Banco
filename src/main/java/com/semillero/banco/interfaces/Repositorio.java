@@ -16,8 +16,6 @@ public interface Repositorio {
 
     public void eliminar(String id);
 
-    public void actualizar(Object objeto);
-
     public List<?> listar();
 
     public Object buscar(String id);

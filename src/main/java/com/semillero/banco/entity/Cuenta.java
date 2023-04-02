@@ -2,23 +2,30 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.semillero.banco.entidades;
+package com.semillero.banco.entity;
 
 /**
  *
  * @author aleon
  */
-public class Cuentas {
+public class Cuenta {
     public int id;
     public String numCuenta;
     public double saldo;
     public String tipoCuenta;
     public int idUsuario;
 
-    public Cuentas() {
+    public Cuenta() {
     }
 
-    public Cuentas(int id, String numCuenta, double saldo, String tipoCuenta, int idUsuario) {
+    public Cuenta(String numCuenta, double saldo, String tipoCuenta, int idUsuario) {
+        this.numCuenta = numCuenta;
+        this.saldo = saldo;
+        this.tipoCuenta = tipoCuenta;
+        this.idUsuario = idUsuario;
+    } 
+
+    public Cuenta(int id, String numCuenta, double saldo, String tipoCuenta, int idUsuario) {
         this.id = id;
         this.numCuenta = numCuenta;
         this.saldo = saldo;

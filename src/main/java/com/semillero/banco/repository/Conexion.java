@@ -21,7 +21,6 @@ public class Conexion {
         try {
             DriverManager.registerDriver(new org.sqlite.JDBC());
             cadenaConexion = "jdbc:sqlite:banco.db";
-            // Las funciones de crear tablas se llaman en el correcto orden debido a las relaciones que manejan entre ellas
             crearTablaUsuarios();
             crearTablaCuentas();
             crearTablaTransacciones();

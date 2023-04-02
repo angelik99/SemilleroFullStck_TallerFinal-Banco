@@ -2,22 +2,28 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.semillero.banco.entidades;
+package com.semillero.banco.entity;
 
 /**
  *
  * @author aleon
  */
-public class Usuarios {
+public class Usuario {
     public int id;
     public String nombre;
     public String apellido;
     public String cedula;
 
-    public Usuarios() {
+    public Usuario() {
     }
 
-    public Usuarios(int id, String nombre, String apellido, String cedula) {
+    public Usuario(String nombre, String apellido, String cedula) {
+        this.nombre = nombre;
+        this.apellido = apellido;
+        this.cedula = cedula;
+    }
+
+    public Usuario(int id, String nombre, String apellido, String cedula) {
         this.id = id;
         this.nombre = nombre;
         this.apellido = apellido;

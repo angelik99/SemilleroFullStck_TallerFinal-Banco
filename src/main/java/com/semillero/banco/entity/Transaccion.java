@@ -2,26 +2,38 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.semillero.banco.entidades;
+package com.semillero.banco.entity;
 
 /**
  *
  * @author aleon
  */
-public class Transacciones {
+public class Transaccion {
+
     public int id;
     public String fecha;
     public String hora;
+    private String tipoTransaccion;
     public double monto;
-    public int idTipoCuenta;
+    public int idCuenta;
     public String tipoCuenta;
 
-    public Transacciones(int id, String fecha, String hora, double monto, int idTipoCuenta, String tipoCuenta) {
+    public Transaccion(int id, String fecha, String hora, String tipoTransaccion, double monto, int idCuenta, String tipoCuenta) {
         this.id = id;
         this.fecha = fecha;
         this.hora = hora;
+        this.tipoTransaccion = tipoTransaccion;
         this.monto = monto;
-        this.idTipoCuenta = idTipoCuenta;
+        this.idCuenta = idCuenta;
+        this.tipoCuenta = tipoCuenta;
+    }
+
+    public Transaccion(String fecha, String hora, String tipoTransaccion, double monto, int idCuenta, String tipoCuenta) {
+        this.fecha = fecha;
+        this.hora = hora;
+        this.tipoTransaccion = tipoTransaccion;
+        this.monto = monto;
+        this.idCuenta = idCuenta;
         this.tipoCuenta = tipoCuenta;
     }
 
@@ -45,6 +57,14 @@ public class Transacciones {
         return hora;
     }
 
+    public String getTipoTransaccion() {
+        return tipoTransaccion;
+    }
+
+    public void setTipoTransaccion(String tipoTransaccion) {
+        this.tipoTransaccion = tipoTransaccion;
+    }
+
     public void setHora(String hora) {
         this.hora = hora;
     }
@@ -57,12 +77,12 @@ public class Transacciones {
         this.monto = monto;
     }
 
-    public int getIdTipoCuenta() {
-        return idTipoCuenta;
+    public int getIdCuenta() {
+        return idCuenta;
     }
 
-    public void setIdTipoCuenta(int idTipoCuenta) {
-        this.idTipoCuenta = idTipoCuenta;
+    public void setIdCuenta(int idCuenta) {
+        this.idCuenta = idCuenta;
     }
 
     public String getTipoCuenta() {
@@ -72,5 +92,5 @@ public class Transacciones {
     public void setTipoCuenta(String tipoCuenta) {
         this.tipoCuenta = tipoCuenta;
     }
-     
+
 }

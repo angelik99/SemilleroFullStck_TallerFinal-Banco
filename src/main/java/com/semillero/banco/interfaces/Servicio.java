@@ -18,8 +18,6 @@ public interface Servicio {
 
     public void eliminar(String id);
 
-    public void actualizar(Map datos);
-
     public List<?> listar();
 
     public Object buscar(String id) throws Exception;
